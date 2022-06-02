@@ -1,5 +1,5 @@
 :root{
-    background: #212738;
+    --background: #212738;
     --accent: #AD74BE;
     --text-color: #fff;
     --dark:#171B26;
@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: var(background);
+    background-color: var(--background);
     font-family: 'Raleway', sans-serif;
     color: white;
     padding: 0 ;
@@ -126,6 +126,13 @@ header .img .illu{
     border-radius: 50%;
 }
 
+
+@keyframes glass-motion {
+    0% {transform: translate(0px, 0px);}
+    40% {transform: translate(0px, 20px);}
+    100% {transform: translate(0px, 0px);}
+}
+
 .socials a img{
     
 }
@@ -135,22 +142,42 @@ header .img .illu{
     background-color: rgba(255, 255, 255, 0.25);
     height: 30vh;
     width: 30vh;
-    border-radius: 50%;
+    border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
     border: 1px solid #d3d3d3;
     position: absolute;
     z-index: 1;
-   
+    animation-name: glass-motion;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    opacity: 0.8;
+    box-shadow: -20px 30px 16px var(--dark), -40px 60px 32px var(--dark), inset -6px 6px 10px var(--dark), inset 2px 6px 10px var(--dark), inset 20px -20px 22px white, inset 40px -40px 44px var(--background);
 }
 
 .one{
      left: 70%;
      top: 50%;
+     animation-delay: 1s;
 }
 
 .two{
     top: 10%;
     left: 45%;
+    animation-delay: 1.5s;
 }
+
+.three{
+    top: 85%;
+    animation-delay: 2s;
+}
+
+.four{
+    animation-delay: 2.2s;
+    top: 160%;
+    left: 70%;
+}
+
+
+
 
 /*ABOUT */
 .about{
