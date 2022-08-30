@@ -169,22 +169,28 @@ section{
     position: relative;
 }
 
-.card:first-child{
-    background: url('cardimg1.jfif');
-    background-position: center;
+.projectTitle{
+    position: absolute;
+}
+.card:first-child {
+    background: url('./resources/img/Opera\ Snapshot_2022-08-29_213116_localhost.png');
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .card:nth-child(2){
-    background: url('cardimg2.jfif');
-    background-position: center;
+    background: url('./resources/img/Opera\ Snapshot_2022-08-29_220852_localhost.png');
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .card:hover::after{
     content: '';
+    text-align: center;
+    color: wheat;
+    font-weight: 700;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -236,11 +242,12 @@ section{
 
 .btn{
     background-color: #B2CD0D;
-    padding: 1.5rem 1rem;
+    padding: 1rem 1rem;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: #121212;
     font-weight: 800;
+    display: flex;
 
 }
 
@@ -309,6 +316,8 @@ footer{
     background-color: #B2CD0D;
     padding: 3rem 4rem;
     font-weight: 800;
+    display: flex;
+    justify-content: space-around;
 }
 
 .aboutContent{
@@ -369,6 +378,27 @@ footer{
  }
 
 
+ .skills{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 2rem;
+   
+ }
+
+ .skill{
+    padding: 1rem;
+   box-shadow: 5px 0px 0px #B2CD0D;
+ }
+
+ .skill img{
+    max-height: 80px;
+    margin: auto;
+ }
+
+ .skill h4{
+    font-size: 1.5rem;
+ }
 
  /*Media Queries */
 /**** DESKTOPS DESIGN ****/
@@ -453,6 +483,8 @@ footer{
     
   }
 
+
+  
 
   /*** TABLETS DESIGNS ***/
 
